@@ -103,7 +103,24 @@ void CurryHunter::program(SingleSwitchProgramEnvironment& env, BotBaseContext& c
         //  Which berries do you want to use?
         pbf_press_button(context, BUTTON_A, 5, 75);     //  Get rid of the pop-up menu.
         pbf_press_button(context, BUTTON_A, 5, 75);
-        pbf_press_dpad(context, DPAD_UP, 5, 75);
+        pbf_press_button(context, BUTTON_A, 5, 125);
+        pbf_press_button(context, BUTTON_A, 5, 75);
+        pbf_press_button(context, BUTTON_A, 5, 125);
+        pbf_press_button(context, BUTTON_A, 5, 75);
+        pbf_press_button(context, BUTTON_A, 5, 125);
+        pbf_press_button(context, BUTTON_A, 5, 75);
+        pbf_press_button(context, BUTTON_A, 5, 125);
+        pbf_press_button(context, BUTTON_A, 5, 75);
+        pbf_press_button(context, BUTTON_A, 5, 125);
+        pbf_press_button(context, BUTTON_A, 5, 75);
+        pbf_press_button(context, BUTTON_A, 5, 125);
+        pbf_press_button(context, BUTTON_A, 5, 75);
+        pbf_press_button(context, BUTTON_A, 5, 125);
+        pbf_press_button(context, BUTTON_A, 5, 75);
+        pbf_press_button(context, BUTTON_A, 5, 125);
+        pbf_press_button(context, BUTTON_A, 5, 75);
+        pbf_press_button(context, BUTTON_A, 5, 125);
+        pbf_press_button(context, BUTTON_A, 5, 75);
         pbf_press_button(context, BUTTON_A, 5, 125);
         pbf_press_button(context, BUTTON_PLUS, 5, 200); //  125. english text is longer.
         pbf_press_button(context, BUTTON_A, 5, 1000);   //  Berries are now selected as well.
