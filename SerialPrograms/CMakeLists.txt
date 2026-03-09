@@ -325,7 +325,7 @@ if (WIN32)
     if(CMAKE_GENERATOR_TOOLSET MATCHES "ClangCL")
         target_compile_options(SerialProgramsLib PRIVATE -Wno-unused-function)
         target_compile_options(SerialProgramsLib PRIVATE -march=nehalem)
-        set(ARCH_FLAGS_09_Nehalem       -march=nehalem)
+        set(ARCH_FLAGS_09_Nehalem       -march=armv8)
         set(ARCH_FLAGS_13_Haswell       -march=haswell)
         set(ARCH_FLAGS_17_Skylake       -march=skylake-avx512)
         set(ARCH_FLAGS_19_IceLake       -march=icelake-client)
@@ -706,3 +706,4 @@ endif()
 
 # Add command-line executable (GUI-free) from subdirectory
 include(Source/CommandLine/CommandLineExecutable.cmake)
+
