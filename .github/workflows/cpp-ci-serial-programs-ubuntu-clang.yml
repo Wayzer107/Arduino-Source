@@ -7,4 +7,6 @@ jobs:
     with:
       os: ubuntu-24.04
       compiler: clang
+      upload-build: true
+
       run-clang-query: true
