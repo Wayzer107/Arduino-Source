@@ -1,5 +1,5 @@
 name: C++ CI Serial Programs Mac
-on: [push, pull_request, workflow_dispatch]
+on: [workflow_dispatch]
 
 jobs:
   build:
@@ -7,4 +7,5 @@ jobs:
     with:
       os: macos-15
       compiler: default
+
       run-tests: true
