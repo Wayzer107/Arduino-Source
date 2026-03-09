@@ -324,7 +324,7 @@ if (WIN32)
 
     if(CMAKE_GENERATOR_TOOLSET MATCHES "ClangCL")
         target_compile_options(SerialProgramsLib PRIVATE -Wno-unused-function)
-        target_compile_options(SerialProgramsLib PRIVATE -march=nehalem)
+        target_compile_options(SerialProgramsLib PRIVATE -march=armv8)
         set(ARCH_FLAGS_09_Nehalem       -march=armv8)
         set(ARCH_FLAGS_13_Haswell       -march=haswell)
         set(ARCH_FLAGS_17_Skylake       -march=skylake-avx512)
@@ -505,18 +505,8 @@ else() # macOS and Linux
         # Assume GCC
         target_compile_options(SerialProgramsLib PRIVATE -Wall -Wextra -Wpedantic -Werror -fno-strict-aliasing)
     endif()
-
-    if(${CMAKE_SYSTEM_PROCESSOR} MATCHES "arm")
         # Arm CPU
         #   Run-time ISA dispatching
-        target_compile_definitions(SerialProgramsLib PRIVATE PA_AutoDispatch_arm64_20_M1)
-    else()
-        # Intel CPU
-        target_compile_options(SerialProgramsLib PRIVATE -march=nehalem)
-        set(ARCH_FLAGS_09_Nehalem       -march=nehalem)
-        set(ARCH_FLAGS_13_Haswell       -march=haswell)
-        set(ARCH_FLAGS_17_Skylake       -march=skylake-avx512)
-        set(ARCH_FLAGS_19_IceLake       -march=icelake-client)
 
         #   Run-time ISA dispatching
         target_compile_definitions(SerialProgramsLib PRIVATE PA_AutoDispatch_x64_08_Nehalem)
@@ -706,4 +696,5 @@ endif()
 
 # Add command-line executable (GUI-free) from subdirectory
 include(Source/CommandLine/CommandLineExecutable.cmake)
+
 
