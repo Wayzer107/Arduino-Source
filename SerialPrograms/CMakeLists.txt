@@ -515,7 +515,6 @@ else() # macOS and Linux
         target_compile_definitions(SerialProgramsLib PRIVATE PA_AutoDispatch_x64_19_IceLake)
 
     endif()
-endif()
 
 
 
@@ -696,5 +695,6 @@ endif()
 
 # Add command-line executable (GUI-free) from subdirectory
 include(Source/CommandLine/CommandLineExecutable.cmake)
+
 
 
