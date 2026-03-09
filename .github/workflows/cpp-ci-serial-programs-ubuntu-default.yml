@@ -1,12 +1,13 @@
 name: C++ CI Serial Programs Ubuntu Default
-on: [push, pull_request, workflow_dispatch]
+on: [workflow_dispatch]
 
 jobs:
   build:
     uses: ./.github/workflows/cpp-ci-serial-programs-base.yml
     with:
-      os: ubuntu-24.04
+      os: ubuntu-24.04-arm
       compiler: default
       upload-build: true
 
       run-clang-query: true
+
